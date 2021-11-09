@@ -77,3 +77,6 @@ regionName();
 
 // Sam vragen waarom hebben we hier className gemaakt?
 // <span id="name" className="${regionName(country.region)}">${country.name}</span>
+
+
+//* troubleshoot github
