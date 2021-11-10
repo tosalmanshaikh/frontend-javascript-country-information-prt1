@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1Mq12":[function(require,module,exports) {
+})({"fu0BG":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4a236f9275d0a351";
-module.bundle.HMR_BUNDLE_ID = "b5b6c481d56a3cb1";
+module.bundle.HMR_BUNDLE_ID = "8c42186702b91e29";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -458,158 +458,49 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"5HwUs":[function(require,module,exports) {
+},{}],"h0Us0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-// Stap 3. Schrijf een asynchrone functie die, met behulp van Axios, een GET-request maakt naar het juiste endpoint. Log de response in de console en bestudeer de data goed.
-async function getCountries() {
-    const countryList = document.getElementById("countries-list");
+console.log("hoi");
+async function searchByCountry() {
     try {
-        const result = await _axiosDefault.default.get('https://restcountries.com/v2/all');
-        const countries = result.data;
-        // console.log(result.data);
-        countries.sort((a, b)=>{
-            return a.population - b.population;
-        });
-        result.data.map((country)=>{
-            const countryItem1 = document.createElement("li");
-            countryItem1.innerHTML = `
-                <img src="${country.flag}" alt="vlaggetje van landje" class="flag"/>
-                <span id="name" class="${regionName(country.region)}">${country.name}</span>
-             `;
-            const countryItem2 = document.createElement("li");
-            countryItem2.innerHTML = `
-                <p class="population">Has a population of: ${country.population} people</p>
-            `;
-            countryList.appendChild(countryItem1);
-            countryList.appendChild(countryItem2);
-        });
+        const result = await _axiosDefault.default.get('https://restcountries.com/v2/name/netherlands');
+        console.log(result.data[0].name);
+    // console.log(result.data[0].name);
+    //
+    // const countryItem1 = document.createElement("li");
+    // countryItem1.innerHTML = `
+    //         <img src="${country.flag}" alt="vlaggetje van landje" class="flag"/>
+    //         <span id="name" class="${regionName(country.region)}">${country.name}</span>
+    //      `;
+    //
+    // const countryItem2 = document.createElement("li");
+    // countryItem2.innerHTML = `
+    //         <p class="population">Has a population of: ${country.population} people</p>
+    //     `;
+    //
+    //
+    // countryList.appendChild(countryItem1);
+    // countryList.appendChild(countryItem2);
+    // });
     } catch (e) {
-        console.error(e);
+        return console.error(e);
     }
 }
-getCountries();
-// Schrijf een aparte functie die één regio-naam verwacht, en op basis van deze regio de correcte kleur-naam als string
-// teruggeeft. Gebruik deze, om de naam van het land in de juiste kleur weer te geven op de pagina. _Tip_: zorg ervoor
-// dat je CSS-classes maakt voor alle regio-kleuren!
-function regionName(arrRegion) {
-    if (arrRegion === "Africa") return arrRegion === "Africa";
-    else if (arrRegion === "Asia") return "Asia";
-    else if (arrRegion === "Europe") return "Europe";
-    else if (arrRegion === "Oceania") return "Oceania";
-    else return "Americas";
-}
-regionName(); // Sam vragen waarom hebben we hier className gemaakt?
- // <span id="name" className="${regionName(country.region)}">${country.name}</span>
- //* troubleshoot github
- // * peer review: Rinus
- // import axios from 'axios';
- //
- // ///////////////////////
- // // Elements
- // ///////////////////////
- // const countryContainer = document.getElementById('countries');
- //
- // ///////////////////////
- // // Constructors
- // ///////////////////////
- //
- // const countryFlag = (country) => {
- //     return`
- //     <img src="${country.flags.png}" alt="${country.name}"/>
- //     `
- // };
- //
- // const countryTittle = (country) => {
- //     return `
- //     <h3 class="${continentColor(country)}">${country.name} ${countryFlag(country)}</h3>
- //     `
- // };
- //
- // const countryPopulation = (country) => {
- //     return `
- //     <div>
- //     Has a population of <span class="population">${country.population}</span> people
- //     </div>
- // `
- // };
- //
- // const countryListItem = (country) => {
- //     return `
- //         <li class="countryListItem">
- //         ${countryTittle(country)}
- //         ${countryPopulation(country)}
- //         </li>
- //     `;
- // };
- //
- //
- // ///////////////////////
- // // Manipulation
- // ///////////////////////
- //
- // const sortOnPopulation = (countries) => {
- //     countries.sort((a,b)=> a.population - b.population)
- // };
- //
- // const continentColor = (countries) => {
- //     switch (countries.region) {
- //         case "Antarctic Ocean":
- //             return "light-gray";
- //         case "Antarctic":
- //             return "light-blue";
- //         case "Americas":
- //             return "green";
- //         case "Oceania":
- //             return "purple";
- //         case "Africa":
- //             return "blue";
- //         case "Europe":
- //             return "yellow";
- //         case "Polar":
- //             return "black";
- //         case "Asia":
- //             return "red";
- //     }
- // };
- //
- // ///////////////////////
- // // API Calls
- // ///////////////////////
- //
- // const getCountries = async () => {
- //     try {
- //         const result = await axios.get('https://restcountries.com/v2/all');
- //         // Log all data
- //         console.log(result);
- //         // Log one country
- //         console.log(result.data[1].name)
- //
- //         sortOnPopulation(result.data);
- //
- //         // Get all continents
- //         const allContinents = result.data.map((country) => {
- //             return `
- //             ${country.region}`
- //         });
- //         // Get unique continents
- //         const uniqueContinents = [...new Set(allContinents)];
- //         console.log(uniqueContinents)
- //
- //         const countryItemList = result.data.map((country) => {
- //             return `
- //             ${countryListItem(country)}
- //             `
- //         });
- //         countryContainer.innerHTML = `${countryItemList.join('')}`;
- //
- //     } catch (err) {
- //         console.error(err);
- //     }
- // };
- //
- // getCountries()
+searchByCountry(); // https://restcountries.com/v2/name/netherlands// DATA OPHALEN STAPPENPLAN
+ // 1. installeer en importeer axios
+ // ---- zoek in de API documentatie het juiste endpoint
+ // 2. asynchrone functie schrijven
+ // 3. try - catch blok
+ // 4. In het try blok gaan we ons GET-request maken met axios
+ // 5. Resultaat loggen
+ // 6. Probeer een console.log() met de naam van het land te maken
+ // 7. Probeer een console.log() met de populatie van het land
+ // DINGEN OP PAGINA WEERGEVEN STAPPENPLAN
+ // 1. 'anker'-element in het HTML-bestand plaatsen (met ID!)
+ // 2. sla de referentie naar dit element op in het JS-bestand
+ // 3. Gebruik .innerHTML om een stukje data op de pagina te laten zien
 
 },{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 module.exports = require('./lib/axios');
@@ -2199,6 +2090,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["1Mq12","5HwUs"], "5HwUs", "parcelRequirecb08")
+},{}]},["fu0BG","h0Us0"], "h0Us0", "parcelRequirecb08")
 
-//# sourceMappingURL=index.d56a3cb1.js.map
+//# sourceMappingURL=zoeker.02b91e29.js.map

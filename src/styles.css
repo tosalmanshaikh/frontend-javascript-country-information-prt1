@@ -67,3 +67,128 @@ p {
     margin-top: -20px;
 
 }
+
+
+
+
+/*// peer review Rinus*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,800&family=Press+Start+2P&display=swap');*/
+
+/*:root {*/
+/*    --primary-color: hsl(214, 77%, 65%);*/
+/*    --secondary-color: hsl(214, 100%, 76%);*/
+/*    --tertiary-color: hsl(214, 51%, 41%);*/
+/*    --quaternary-color: hsl(213, 70%, 79%);*/
+/*    --quinary-color: hsl(39, 64%, 38%);*/
+/*    --senary-color: hsl(39, 77%, 65%);*/
+
+/*    --lighgray-color: hsl(0, 0%, 69%);*/
+/*    --darkgray-color: hsl(0, 0%, 36%);*/
+
+/*    --black-color: hsl(0, 0%, 14%);*/
+/*    --white-color: hsl(0, 0%, 100%);*/
+
+/*    --tittle-font: 'Press Start 2P', cursive;*/
+/*    --normal-font: 'Open Sans', sans-serif;*/
+/*}*/
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    font-family: var(--normal-font);*/
+/*}*/
+
+/*body {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.container {*/
+
+/*}*/
+
+/*.hero-image {*/
+/*    width: 100%;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.countryList-container {*/
+/*    display: flex;*/
+/*    gap: 5px;*/
+/*    align-content: center;*/
+/*    !*flex-direction: column;*!*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*    background: lightgray;*/
+/*    padding: 20px;*/
+/*    margin: 50px;*/
+
+
+/*}*/
+
+/*.countryList {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    list-style: none;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.countryListItem {*/
+/*    border: 1px solid;*/
+/*    width: 32%;*/
+/*    padding: 5px;*/
+/*    margin: 3px;*/
+/*}*/
+
+/*#countries li div span.population {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#countries li h3 {*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: row;*!*/
+/*}*/
+
+/*#countries li h3 img {*/
+/*    !*flex-flow: s;*!*/
+/*    align-self: end;*/
+/*    !*justify-self: end;*!*/
+/*    height: 1rem;*/
+
+/*}*/
+
+/*.light-gray {*/
+/*    color: lightslategray;*/
+/*}*/
+
+/*.light-blue {*/
+/*    color: deepskyblue;*/
+/*}*/
+
+/*.green {*/
+/*    color: green;*/
+/*}*/
+
+/*.purple {*/
+/*    color: rebeccapurple;*/
+/*}*/
+
+/*.blue {*/
+/*    color: darkblue;*/
+/*}*/
+
+/*.black {*/
+/*    color: black;*/
+/*}*/
+
+/*.yellow {*/
+/*    color: yellow;*/
+/*}*/
+
+/*.red {*/
+/*    color: red*/
+/*}*/
